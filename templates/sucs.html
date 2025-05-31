@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Successful</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+        <h1 class="mb-4 text-success">Order Successful (～￣▽￣)～</h1>
+        <a href="{{ url_for('home') }}" class="btn btn-info">Continue Shopping</a>
+    </div>
+</body>
+</html>

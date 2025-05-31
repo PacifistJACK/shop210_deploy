@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop210</title>
+    {% include 'bootstrap.html' %}
+    <style>
+    </style>
+
+</head>
+<style>
+    .banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    }
+    
+
+
+</style>
+<body>
+    {% include 'nav.html'  %}
+    <img src="static/shop.png" class="img-fluid banner-img" alt="Shop210 Banner">
+
+    
+
+    <div class="container">
+        <h2 class="text-center mt-2 mb-4" style="color:cyan;" >About</h2>
+        <p class="lead">Our eCommerce website is a dynamic and user-friendly platform built using Flask, HTML, Bootstrap, and MySQL. Designed for seamless shopping, it features a responsive interface, secure transactions, and efficient product management. The backend, powered by Flask, ensures smooth functionality, while Bootstrap enhances the design for an intuitive user experience. MySQL handles data storage, managing product listings, user accounts, and order details in real time. With a focus on speed, reliability, and scalability, this project aims to provide a seamless and engaging shopping experience for customers.</p>
+        <h2 class="text-center mt-2 mb-4" style="color:cyan;" >Categories</h2>
+        {% include 'category.html' %}
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>

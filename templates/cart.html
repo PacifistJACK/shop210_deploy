@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div class="container mt-5">
+        <h2>Your Cart</h2>
+        {% if cart_items %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td><img src="{{ item.image_url }}" alt="{{ item.name }}" style="width: 100px;"></td>
+                    <td>₹{{ item.price }}</td>
+                    <td>
+                        <form action="{{ url_for('update_quantity') }}" method="POST" class="d-flex justify-content-center align-items-center gap-2">
+                            <input type="hidden" name="item_id" value="{{ item.id }}">
+                            <button type="submit" name="action" value="decrease" class="btn btn-sm btn-outline-secondary">−</button>
+                            <span>{{ item.quantity }}</span>
+                            <button type="submit" name="action" value="increase" class="btn btn-sm btn-outline-secondary">+</button>
+                        </form>
+                    </td>
+                    
+                    <td>₹{{ item.total_price }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            <!-- Total Cost -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h4>Total Cost: ₹{{ total_cost }}</h4>
+                </div>
+            </div>
+    
+            <!-- Buy Now Button -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <form action="/checkout" method="POST">
+                        <button type="submit" class="btn btn-success btn-lg">Buy Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>
