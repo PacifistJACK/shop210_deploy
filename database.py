@@ -10,7 +10,7 @@ db_connection_link = os.getenv("DB_CONNECTION_LINK").strip('"')
 secret_key = os.getenv("SECRET_KEY")
 
 # Path to CA certificate (ensure this path is correct)
-ca_cert_path = r"D:\Shop\Shop210\ca.pem"
+ca_cert_path = "./ca.pem"
 
 # Create SQLAlchemy engine with SSL using pymysql
 engine = create_engine(
