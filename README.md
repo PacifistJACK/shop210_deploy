@@ -22,9 +22,9 @@
 🔹 Lists product categories with large, aesthetic category images.
 
 📸 Screenshot:
-![Home Page](![image](https://github.com/user-attachments/assets/4e47b297-4d9c-469d-bf27-3e07a14c6bde)
+![Home Page](![Screenshot 2025-07-08 102132](https://github.com/user-attachments/assets/a7c72606-1c01-4e5d-a32e-c161ec01764b)
 )
-![Home Page](![image](https://github.com/user-attachments/assets/ede4dd4e-564a-4b8e-bb92-c9a2d61ccb09)
+![Home Page](![Screenshot 2025-07-08 102222](https://github.com/user-attachments/assets/b56725a5-1589-4bbb-86c1-148d5ee429a1)
 )
 
 ---
@@ -80,14 +80,3 @@ This project demonstrates a basic but functional structure of an e-commerce webs
 * 📦 Order processing and history
 * 💳 Payment gateway integration
 * 📊 Admin dashboard for product management
-
----
-
-Let me know if you want:
-
-* Markdown with screenshot embedding
-* A logo/banner
-* Setup instructions or environment file template (`.env`)
-* Feature badges (like ![Python](https://img.shields.io/badge/Python-3.10-blue) etc.)
-
-🗿
